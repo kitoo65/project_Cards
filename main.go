@@ -17,6 +17,5 @@ func newCard() string {
 }
 
 func (d deck) toString() string { //Its going to take a deck and return a complete string representation of it
-	//hiasd
 
 }
