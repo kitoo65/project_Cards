@@ -15,13 +15,11 @@ func newDeck() deck { // I put 'deck', will tell go that any time someone calls 
 	//An array of strings
 	cards := deck{}
 	cardSuits := []string{"Espada", "Corazon", "Diamante", "Picas"}
-	cardValues := []string{"As de ", "2 de ", "3 de ", "4 de ", "5 de ", "6 de ", "7 de ", "8 de", "9 de ", "10 de ", "J de ", "Q de ", "K de "}
-	var addedCard string
+	cardValues := []string{"As", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"}
 
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			addedCard = value + suit
-			cards = append(cards, addedCard)
+			cards = append(cards, value+" de "+suit)
 		}
 
 	}
@@ -43,3 +41,11 @@ func deal(d deck, handSize int) (deck, deck) { // We expect to call this deal fu
 func (d deck) toString() string { //Its going to take a deck and return a complete string representation of it
 	return strings.Join([]string(d), ",")
 }
+
+//func (d deck) saveToFile(filename string) error {
+
+//Error: We should just return this error that might get produced when we attempt
+//to write something to the hard drive.
+//So, the func makes that the reciever can be casted with a fileName, and will return an error (if smth goes bad)
+//ioutil.WriteFile(filename)
+//}

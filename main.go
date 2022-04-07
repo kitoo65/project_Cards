@@ -8,3 +8,8 @@ func main() {
 	fmt.Println(cards.toString())
 
 }
+
+//For Dealing:
+//hand, rest := deal(cards, 5)
+//fmt.Println(hand.toString())
+//fmt.Println(rest.toString())
